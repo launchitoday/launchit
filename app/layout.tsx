@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Funnel_Display } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-
+import { Analytics } from "@vercel/analytics/next";
 const funnel = Funnel_Display({
   variable: "--font-funnel",
   weight: ["400", "500", "600", "700", "800"],
@@ -28,6 +28,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
