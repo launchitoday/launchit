@@ -10,6 +10,7 @@ import {
   MobileNavToggle,
   MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
+import Link from "next/link";
 import { useState } from "react";
 
 export function SiteNavbar() {
@@ -36,7 +37,9 @@ export function SiteNavbar() {
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
+          <Link href={"https://cal.com/ommishra/15min"} target="_blank">
           <NavbarButton variant="primary">Book a call</NavbarButton>
+          </Link>
         </div>
       </NavBody>
 
